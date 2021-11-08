@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    height: 100vh;
+    perspective: 1000px;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.7);
+    transition: all ease 1s;
+    border-radius: 0 0 5px 5px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+}
+.navbar ul li {
+    margin: 0 1rem;
+}
+.navbar ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f4f4f4;
+}
+.navbar ul li a:hover{
+    color: skyblue;
+}
+
+.logo {
+    width: 70px;
+    height: 40px;
+}
+
+/* Intro */
+.intro {
+    width: 100%;
+    height: 90vh;
+}
+.card {
+    margin: 50px;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+}
+.card h2{
+    font-weight: 600px;
+    line-height: 2.2;
+}
+.wrapper {
+    width: 100%;
+    height: 90vh;
+    display: block;
+}
+.asset {
+    height: 100px;
+    position: relative;
+}
+.asset .box {
+    position: absolute;
+    top: 4px;
+    left: 30px;
+    height: fit-content;
+    width: 50%;
+}
+.asset>.box h5{
+    font-size: 14px;
+    font-weight: normal;
+}
+.card-body {
+    position: relative;
+}
+.card-body i {
+    position: absolute;
+    top: 322px;
+    right: -92px;
+}
+
+.btn {
+    position: absolute;
+    top: 330px;
+    left: 15px;
+}
+.image-gallery {
+    float: left;
+    margin: 20px 0;
+    width: 450px;
+    height: 480px;
+    align-items: center;
+}
+.primary {
+    width: 100%;
+    height: 80%;
+}
+.thumbnails {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    padding: 5px;
+}
+
+.thumbnail {
+    object-fit: cover;
+    max-width: 60px;
+    max-height: 60px;
+    cursor: pointer;
+    opacity: 0.5;
+    margin: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    transition: all ease 1s;
+}
+.active, .thumbnail:hover {
+    opacity: 1;
+}
+#slider {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.arrow{
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.arrow:hover{
+	opacity: .5;
+	width: 35px;
+	height: 35px;
+}
+#featured{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.slideshow {
+    /* border: 1px solid; */
+    width: 100%;
+    height: 80vh;
+    display: block;
+}
+.slideshow>.container {
+    height: 80vh;
+    width: 100%;
+    background-color: rgba(221, 221, 221, 0.3);
+    background-image: url(./img/meeting-room.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+
+}
+.started {
+    position: absolute;
+    bottom: -13%;
+    left: 30%;
+    transform: scale(0.5);
+    transition: linear 1s all;
+}
+
+.spec {
+    height: 60vh;
+    width: 100%;
+    justify-content: center;
+}
+.row{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.col img {
+    width: 40px;
+    height: 40px;
+}
+.col h3 {
+    font-size: 14px;
+    margin: auto;
+}
+.row li {
+    list-style-type: none;
+    border-radius: 10px;
+    min-height: 40px;
+    margin: 10px 0;
+}
+
+/* Container slideshow */
+
+.slider {
+    width: 200px;
+    height: 100px;
+    margin-left: auto;
+    visibility: visible;
+    position: relative;
+    transition: ease 0.5s all;
+}
+.slider i {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    z-index: 2;
+    cursor: pointer;
+}
+.slider i:hover{
+    color: brown;
+}
+
+.carousel-item {
+    background-size: contain;
+}
+
+#indicator button {
+    opacity: 0;
+}
+
+.info {
+    width: 100%;
+}
+
+.more-info {
+    padding: 0 50px;
+    cursor: pointer;
+    font-size: 32px;
+    font-weight: 600;
+    opacity: 0.7;
+    transition: ease opacity 0.5s;
+    position: relative;
+}
+.more-info:hover{
+    opacity: 1;
+}
+.more-info img {
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    opacity: 0.5;
+    transition: linear 0.5s transform;
+}
+.collapse>.card {
+    width: 85%;
+}
+.info>.visible{
+    height: 500px;
+    visibility: visible;
+    padding: 10px;
+    width: 100%;
+    transition: all 0.5s linear;
+    line-height: 27px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.info>.visible li {
+    list-style-type: disc;
+}
+.info>.hidden {
+    height: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.footer {
+    width: 100%;
+    background-color: #f5f5f7;
+    height: 300px;
+}
+.links {
+    width: 100%;
+    padding: 10px;
+    height: 90%;
+}   
+.links i {
+    margin: 10px 0;
+    transition: opacity ease 0.5s;
+    opacity: 0.5;
+}
+
+.links a:hover,.links a,.links a:focus,.links a:active {
+    text-decoration: none;
+    color: inherit;
+}
+.links i:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.links ul {
+    text-align: left;
+}
+.links li {
+    list-style-type: disc;
+}
+.links h3 {
+    text-align: left;
+}
+.links h2 {
+    margin-top: 50px;
+}
+.copyright {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: rgba(221, 221, 221, 0.3);
+}
+
+
+
+
+
+
+
